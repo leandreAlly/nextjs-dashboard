@@ -3,22 +3,18 @@ import { Card } from '../../ui/dashboard/cards';
 import RevenueChart from '../../ui/dashboard/revenue-chart';
 import LatestInvoices from '../../ui/dashboard/latest-invoices';
 import { lusitana } from '../../ui/font';
-import {
-  // fetchRevenue,
-  fetchLatestInvoices,
-  fetchCardData,
-} from '../../lib/data';
+import { fetchCardData } from '../../lib/data';
 import { RevenueChartSkeleton } from '../../ui/skeletons';
+import { LatestInvoicesSkeleton } from '../../ui/skeletons';
 
 export default async function Page() {
-  // const revenue = await fetchRevenue();
-  const latestInvoices = await fetchLatestInvoices();
   const {
     numberOfCustomers,
     numberOfInvoices,
     totalPendingInvoices,
     totalPaidInvoices,
   } = await fetchCardData();
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -38,7 +34,9 @@ export default async function Page() {
         <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
         </Suspense>
-        <LatestInvoices latestInvoices={latestInvoices} />
+        <Suspense fallback={<LatestInvoicesSkeleton />}>
+          <LatestInvoices />
+        </Suspense>
       </div>
     </main>
   );
