@@ -4,6 +4,7 @@ import Table from '../../ui/invoices/table';
 import { CreateInvoice } from '../../ui/invoices/buttons';
 import { lusitana } from '../../ui/font';
 import { InvoicesTableSkeleton } from '../../ui/skeletons';
+import { fetchInvoicesPages } from '../../lib/data';
 import { Suspense } from 'react';
 
 interface SearchProps {
@@ -17,7 +18,7 @@ export default async function Page({ searchParams }: SearchProps) {
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
 
-  console.log('query+++', query);
+  const totalPages = await fetchInvoicesPages(query);
 
   return (
     <div className="w-full">
@@ -32,7 +33,7 @@ export default async function Page({ searchParams }: SearchProps) {
         <Table query={query} currentPage={currentPage} />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">
-        {/* <Pagination totalPages={totalPages} /> */}
+        <Pagination totalPages={totalPages} />
       </div>
     </div>
   );
