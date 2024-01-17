@@ -1,5 +1,15 @@
 import '@/app/ui/global.css';
 import { inter } from './ui/font';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | iTrade Dashboard',
+    default: 'iTrade Dashboard',
+  },
+  description: 'All your trades and customers in one place',
+  metadataBase: new URL('https://itrade-dashboard.vercel.app'),
+};
 
 export default function RootLayout({
   children,
