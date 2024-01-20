@@ -1,4 +1,5 @@
-import '@/app/ui/global.css';
+import '../app/ui/global.css';
+import '../app/ui/slick.css';
 import { inter } from './ui/font';
 import { Metadata } from 'next';
 
