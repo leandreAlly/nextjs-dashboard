@@ -5,8 +5,6 @@ const About = () => {
   return (
     <div className="mt-[-150px] w-full bg-white px-4 py-16">
       <div className="mx-auto grid max-w-[1240px] md:grid-cols-2 ">
-        {/* <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12"> */}
-        {/* Add Hero Images Here */}
         <div className="p-6 md:px-10 md:py-12">
           <Image
             src="/hero-desktop.png"
@@ -23,7 +21,6 @@ const About = () => {
             alt="Screenshot of the dashboard project showing mobile version"
           />
         </div>
-        {/* </div> */}
         <div className="flex flex-col justify-center">
           <p className="font-bold text-blue-500 ">
             TRADING ANALYTICS DASHBOARD
@@ -32,12 +29,12 @@ const About = () => {
             Manage Trading Analytics Centrally
           </h1>
           <p>
-            Welcome to our feedback community! I'm your dedicated host,
+            Welcome to our feedback community! I amm your dedicated host
             passionate about empowering voices and driving positive change.
-            Together, we'll explore new horizons and improve our services. Your
-            input fuels our growth, and we're committed to making your
-            experience extraordinary. Join us on this journey, and let's shape a
-            brighter future, one feedback at a time
+            Together we will explore new horizons and improve our services. Your
+            input fuels our growth, and we are committed to making your
+            experience extraordinary. Join us on this journey and let shape a
+            brighter future one feedback at a time
           </p>
           <button className="mx-auto my-6 w-[200px] rounded-md border border-black bg-black py-3 font-semibold text-blue-500 transition-all hover:border-black hover:bg-white hover:text-black md:mx-0">
             View Demo

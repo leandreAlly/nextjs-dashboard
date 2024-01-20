@@ -1,6 +1,7 @@
 'use client';
 
 import Typed from 'react-typed';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -18,9 +19,11 @@ const Hero = () => {
         <p className="text-xl font-bold text-gray-500 md:text-2xl">
           Trading at its Finest. Empowering Change, More analytics at a Time.
         </p>
-        <button className="mx-auto my-6 w-[200px] rounded-md bg-blue-500 py-3 font-medium text-white hover:bg-blue-700">
-          Get Started
-        </button>
+        <Link href="/login">
+          <button className="mx-auto my-6 w-[200px] rounded-md bg-blue-500 py-3 font-medium text-white hover:bg-blue-700">
+            Get Started
+          </button>
+        </Link>
       </div>
     </div>
   );
