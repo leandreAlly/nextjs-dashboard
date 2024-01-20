@@ -1,4 +1,3 @@
-import AcmeLogo from './ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,6 +6,8 @@ import { Metadata } from 'next';
 import Hero from './components/Hero';
 import Header from './components/Home/Header';
 import Navbar from './components/Home/NavBar';
+import About from './components/Home/About';
+import Pricing from './components/Home/Pricing';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -19,7 +20,9 @@ export default function Page() {
       <Navbar />
       <main className="flex min-h-screen flex-col px-6">
         <Hero />
-        <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
+        <About />
+        <Pricing />
+        {/* <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
           <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
             <p
               className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
@@ -39,7 +42,7 @@ export default function Page() {
           </div>
           <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
             {/* Add Hero Images Here */}
-            <Image
+        {/* <Image
               src="/hero-desktop.png"
               width={1000}
               height={760}
@@ -54,7 +57,7 @@ export default function Page() {
               alt="Screenshot of the dashboard project showing mobile version"
             />
           </div>
-        </div>
+        </div> */}
       </main>
     </>
   );
