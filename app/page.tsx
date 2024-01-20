@@ -6,6 +6,9 @@ import Navbar from './components/Home/NavBar';
 import Pricing from './components/Home/Pricing';
 import Testimoni from './components/Home/Testimoni';
 import testmoni from '../scripts/testimoni';
+import Newsletter from './components/Home/NewLetter';
+import Contact from './components/Home/Contact';
+import Footer from './components/Home/Footer';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -21,6 +24,9 @@ export default function Page() {
         <About />
         <Pricing />
         <Testimoni listTestimoni={testmoni} />
+        <Newsletter />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
